@@ -57,7 +57,7 @@ function Navbar() {
 
         <div className="navbar__actions">
           <NavLink to="/contact" className="btn btn--primary btn--sm">
-            Let&apos;s Talk
+            Get in Touch
           </NavLink>
         </div>
 
@@ -87,7 +87,7 @@ function Navbar() {
             </NavLink>
           ))}
           <NavLink to="/contact" className="btn btn--primary btn--full-mobile" onClick={closeMenu}>
-            Let&apos;s Talk
+            Get in Touch
           </NavLink>
         </nav>
       </div>

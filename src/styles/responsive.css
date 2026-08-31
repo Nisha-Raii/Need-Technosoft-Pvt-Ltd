@@ -1,0 +1,511 @@
+/* ==========================================================================
+   LAPTOP (max-width: 1279px)
+   ========================================================================== */
+@media (max-width: 1279px) {
+  .container {
+    max-width: 1080px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+}
+
+/* ==========================================================================
+   TABLET (max-width: 1023px)
+   ========================================================================== */
+@media (max-width: 1023px) {
+  .section {
+    padding-block: 64px;
+  }
+
+  .hero {
+    padding-block: 48px 56px;
+  }
+
+  .hero__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero__visual {
+    order: 2;
+    max-width: 480px;
+    margin-inline: auto;
+    width: 100%;
+  }
+
+  .hero__content {
+    order: 1;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .navbar__links {
+    gap: 18px;
+  }
+
+  .navbar__link {
+    font-size: 14px;
+  }
+
+  /* Intro */
+  .intro__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* Services list */
+  .service-list__item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  /* Stats */
+  .stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 16px;
+  }
+
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding-block: 18px;
+  }
+
+  /* Featured projects */
+  .featured-project--large {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-projects__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Tech groups */
+  .tech-groups {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  /* About */
+  .about-who {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-timeline {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  .about-mv {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  /* Services sections */
+  .service-section__inner {
+    grid-template-columns: 72px 1fr;
+    gap: 24px;
+  }
+
+  .service-section__label {
+    font-size: 32px;
+  }
+
+  /* Portfolio */
+  .portfolio-item--large {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Tech categories */
+  .tech-category {
+    grid-template-columns: 200px 1fr;
+    gap: 24px;
+  }
+
+  /* Careers */
+  .reasons-list {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .hire-steps {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  /* Contact */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-grid__info {
+    order: 1;
+  }
+
+  .contact-grid__form {
+    order: 2;
+  }
+
+  /* Footer */
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px 24px;
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ==========================================================================
+   MOBILE NAV BREAKPOINT (max-width: 991px)
+   ========================================================================== */
+@media (max-width: 991px) {
+  .navbar__links,
+  .navbar__actions {
+    display: none;
+  }
+
+  .navbar__toggle {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: block;
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--white);
+    transform: translateX(100%);
+    transition: transform 280ms ease;
+    overflow-y: auto;
+    z-index: 99;
+  }
+
+  .mobile-menu--open {
+    transform: translateX(0);
+  }
+
+  .mobile-menu__links {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 24px 40px;
+    gap: 4px;
+  }
+
+  .mobile-menu__link {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--text);
+    padding: 15px 4px;
+    border-bottom: 1px solid var(--border);
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile-menu__link--active {
+    color: var(--secondary);
+    font-weight: 600;
+  }
+
+  .mobile-menu__links .btn {
+    margin-top: 20px;
+  }
+}
+
+/* ==========================================================================
+   TABLET SMALL / LARGE MOBILE (max-width: 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+  .container {
+    padding-inline: 20px;
+  }
+
+  .section {
+    padding-block: 48px;
+  }
+
+  .section-heading {
+    margin-bottom: 32px;
+  }
+
+  .section-heading h2 {
+    font-size: 28px;
+  }
+
+  .section-heading p {
+    font-size: 15.5px;
+  }
+
+  /* Hero */
+  .hero {
+    padding-block: 36px 44px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero__desc {
+    font-size: 16px;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+  }
+
+  .hero-visual__sidebar {
+    display: none;
+  }
+
+  .hero-visual__main {
+    padding: 16px;
+  }
+
+  /* Intro */
+  .intro__grid h2 {
+    font-size: 28px;
+  }
+
+  /* Stats */
+  .stats__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .stat-item__value {
+    font-size: 32px;
+  }
+
+  .stat-item__label {
+    font-size: 13.5px;
+  }
+
+  /* Featured projects */
+  .featured-project__visual {
+    min-height: 120px;
+    padding: 20px;
+  }
+
+  .featured-project__body {
+    padding: 22px;
+  }
+
+  .featured-project__body h3 {
+    font-size: 18px;
+  }
+
+  /* Tech groups */
+  .tech-groups {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* Why list */
+  .why-list__item {
+    gap: 18px;
+  }
+
+  /* Page hero */
+  .page-hero {
+    padding-block: 40px 36px;
+  }
+
+  .page-hero h1 {
+    font-size: 32px;
+  }
+
+  .page-hero__desc {
+    font-size: 15.5px;
+  }
+
+  /* About */
+  .about-timeline {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .about-timeline::before {
+    display: none;
+  }
+
+  .about-timeline__step {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+    padding-block: 16px;
+    padding-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .about-timeline__dot {
+    margin-bottom: 0;
+    margin-top: 3px;
+  }
+
+  .about-timeline__step h4 {
+    font-size: 15px;
+  }
+
+  /* Services sections */
+  .service-section {
+    padding-block: 44px;
+  }
+
+  .service-section__inner {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .service-section__label {
+    font-size: 28px;
+  }
+
+  .service-section__body h2 {
+    font-size: 22px;
+  }
+
+  .service-section__list {
+    grid-template-columns: 1fr;
+  }
+
+  /* Portfolio */
+  .portfolio-item__visual {
+    min-height: 120px;
+    padding: 20px;
+  }
+
+  .portfolio-item__body {
+    padding: 22px;
+  }
+
+  .portfolio-item__body h2,
+  .portfolio-item__body h3 {
+    font-size: 18px;
+  }
+
+  /* Tech categories */
+  .tech-category {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-block: 22px;
+  }
+
+  /* Careers */
+  .hire-steps {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 480px;
+    margin-inline: auto;
+  }
+
+  .careers-apply__submit {
+    width: 200px;
+  }
+
+  /* Contact form */
+  .contact-form {
+    padding: 24px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-block: 40px 32px;
+  }
+
+  .footer__brand {
+    grid-column: auto;
+  }
+}
+
+/* ==========================================================================
+   SMALL MOBILE (max-width: 430px)
+   ========================================================================== */
+@media (max-width: 430px) {
+  .container {
+    padding-inline: 18px;
+  }
+
+  .navbar__logo-text {
+    font-size: 14.5px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .stats__grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .stat-item {
+    text-align: left;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-block: 16px;
+  }
+
+  .stat-item__value {
+    font-size: 30px;
+  }
+
+  .filter-bar {
+    gap: 8px;
+  }
+
+  .filter-bar__item {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .project-art,
+  .portfolio-art {
+    display: none;
+  }
+
+  .featured-project__visual,
+  .portfolio-item__visual {
+    min-height: 100px;
+  }
+
+  .hire-steps__item {
+    padding: 28px 20px;
+  }
+}
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
