@@ -10,7 +10,6 @@ const navLinks = [
   { label: 'Projects', to: '/projects' },
   { label: 'Technologies', to: '/technologies' },
   { label: 'Careers', to: '/careers' },
-  { label: 'Contact', to: '/contact' },
 ]
 
 function Navbar() {
@@ -24,7 +23,6 @@ function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Lock body scroll while the mobile menu is open
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : ''
     return () => {
@@ -57,7 +55,7 @@ function Navbar() {
 
         <div className="navbar__actions">
           <NavLink to="/contact" className="btn btn--primary btn--sm">
-            Get in Touch
+            Contact Us
           </NavLink>
         </div>
 
@@ -87,7 +85,7 @@ function Navbar() {
             </NavLink>
           ))}
           <NavLink to="/contact" className="btn btn--primary btn--full-mobile" onClick={closeMenu}>
-            Get in Touch
+            Contact Us
           </NavLink>
         </nav>
       </div>

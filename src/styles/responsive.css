@@ -51,16 +51,14 @@
     font-size: 14px;
   }
 
-  /* Intro */
-  .intro__grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
+  /* Service / project / tech cards */
+  .service-grid,
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Services list */
-  .service-list__item {
-    grid-template-columns: 1fr;
-    gap: 8px;
+  .workflow {
+    gap: 10px;
   }
 
   /* Stats */
@@ -75,19 +73,11 @@
     padding-block: 18px;
   }
 
-  /* Featured projects */
-  .featured-project--large {
-    grid-template-columns: 1fr;
-  }
-
-  .featured-projects__grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Tech groups */
-  .tech-groups {
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
+  /* Home tech rows */
+  .home-tech__row {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 24px;
+    padding-block: 22px;
   }
 
   /* About */
@@ -104,31 +94,6 @@
   .about-mv {
     grid-template-columns: 1fr;
     gap: 32px;
-  }
-
-  /* Services sections */
-  .service-section__inner {
-    grid-template-columns: 72px 1fr;
-    gap: 24px;
-  }
-
-  .service-section__label {
-    font-size: 32px;
-  }
-
-  /* Portfolio */
-  .portfolio-item--large {
-    grid-template-columns: 1fr;
-  }
-
-  .portfolio__grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Tech categories */
-  .tech-category {
-    grid-template-columns: 200px 1fr;
-    gap: 24px;
   }
 
   /* Careers */
@@ -271,19 +236,6 @@
     width: 100%;
   }
 
-  .hero-visual__sidebar {
-    display: none;
-  }
-
-  .hero-visual__main {
-    padding: 16px;
-  }
-
-  /* Intro */
-  .intro__grid h2 {
-    font-size: 28px;
-  }
-
   /* Stats */
   .stats__grid {
     grid-template-columns: 1fr 1fr;
@@ -298,29 +250,51 @@
     font-size: 13.5px;
   }
 
-  /* Featured projects */
-  .featured-project__visual {
-    min-height: 120px;
-    padding: 20px;
-  }
-
-  .featured-project__body {
-    padding: 22px;
-  }
-
-  .featured-project__body h3 {
-    font-size: 18px;
-  }
-
-  /* Tech groups */
-  .tech-groups {
+  /* Home tech rows */
+  .home-tech__row {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 14px;
+    padding-block: 22px;
+  }
+
+  .home-tech__cat h3 {
+    font-size: 16px;
   }
 
   /* Why list */
   .why-list__item {
     gap: 18px;
+  }
+
+  /* Service / project / tech cards */
+  .service-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Workflow stacks vertically */
+  .workflow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .workflow__step {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .workflow__node {
+    width: 100%;
+    text-align: center;
+  }
+
+  .workflow__arrow {
+    transform: rotate(90deg);
   }
 
   /* Page hero */
@@ -362,50 +336,6 @@
 
   .about-timeline__step h4 {
     font-size: 15px;
-  }
-
-  /* Services sections */
-  .service-section {
-    padding-block: 44px;
-  }
-
-  .service-section__inner {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-
-  .service-section__label {
-    font-size: 28px;
-  }
-
-  .service-section__body h2 {
-    font-size: 22px;
-  }
-
-  .service-section__list {
-    grid-template-columns: 1fr;
-  }
-
-  /* Portfolio */
-  .portfolio-item__visual {
-    min-height: 120px;
-    padding: 20px;
-  }
-
-  .portfolio-item__body {
-    padding: 22px;
-  }
-
-  .portfolio-item__body h2,
-  .portfolio-item__body h3 {
-    font-size: 18px;
-  }
-
-  /* Tech categories */
-  .tech-category {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding-block: 22px;
   }
 
   /* Careers */
@@ -483,14 +413,8 @@
     font-size: 13px;
   }
 
-  .project-art,
-  .portfolio-art {
+  .project-art {
     display: none;
-  }
-
-  .featured-project__visual,
-  .portfolio-item__visual {
-    min-height: 100px;
   }
 
   .hire-steps__item {
