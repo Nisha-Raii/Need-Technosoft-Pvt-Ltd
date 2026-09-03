@@ -929,6 +929,32 @@ textarea:focus-visible {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 32px;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.about-mv__block:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(38, 55, 70, 0.08);
+  border-color: var(--light-cyan);
+}
+
+.about-mv__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--light-cyan);
+  color: var(--primary);
+  margin-bottom: 20px;
+  transition: transform var(--transition), background var(--transition), color var(--transition);
+}
+
+.about-mv__block:hover .about-mv__icon {
+  transform: scale(1.06);
+  background: var(--primary);
+  color: var(--white);
 }
 
 .about-mv__block h3 {

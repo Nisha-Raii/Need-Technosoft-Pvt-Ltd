@@ -3,6 +3,36 @@ import PageHero from '../components/PageHero.jsx'
 import SectionHeading from '../components/SectionHeading.jsx'
 import StatItem from '../components/StatItem.jsx'
 
+const outlineIconProps = {
+  fill: 'none',
+  stroke: 'currentColor',
+  strokeWidth: 2.4,
+  strokeLinecap: 'round',
+  strokeLinejoin: 'round',
+}
+
+function MissionIcon({ size = 44 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" {...outlineIconProps}>
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="12" cy="12" r="5" />
+      <circle cx="12" cy="12" r="1.5" />
+      <path d="M13.5 10.5 20 4" />
+      <path d="M15.5 4.2 20 4l-.2 4.5" />
+    </svg>
+  )
+}
+
+function VisionIcon({ size = 44 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" {...outlineIconProps}>
+      <path d="M9 17a7 7 0 1 1 6 0" />
+      <path d="M9 17v1a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-1" />
+      <path d="M12 17v2" />
+    </svg>
+  )
+}
+
 const processSteps = [
   { label: 'Discover', description: 'Understanding your business, users and goals' },
   { label: 'Plan', description: 'Defining scope, architecture and timeline' },
@@ -92,10 +122,16 @@ function About() {
         <div className="container">
           <div className="about-mv">
             <div className="about-mv__block">
+              <div className="about-mv__icon" aria-hidden="true">
+                <MissionIcon />
+              </div>
               <h3>Mission</h3>
               <p>To help businesses grow and operate more efficiently through practical, well-built digital solutions.</p>
             </div>
             <div className="about-mv__block">
+              <div className="about-mv__icon" aria-hidden="true">
+                <VisionIcon />
+              </div>
               <h3>Vision</h3>
               <p>To be a dependable technology partner for businesses across Nepal, known for thoughtful, lasting work.</p>
             </div>
