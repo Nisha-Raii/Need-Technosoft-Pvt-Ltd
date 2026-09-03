@@ -58,7 +58,7 @@
   }
 
   .workflow {
-    gap: 10px;
+    gap: 14px;
   }
 
   /* Stats */
@@ -84,6 +84,12 @@
   .about-who {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .about-who__visual {
+    width: 100%;
+    max-width: 520px;
+    margin-inline: auto;
   }
 
   .about-timeline {
@@ -213,6 +219,12 @@
 
   .section-heading p {
     font-size: 15.5px;
+  }
+
+  /* About — Who we are image */
+  .about-who__visual {
+    width: min(100%, 360px);
+    margin-inline: auto;
   }
 
   /* Hero */
@@ -411,10 +423,6 @@
   .filter-bar__item {
     padding: 8px 14px;
     font-size: 13px;
-  }
-
-  .project-art {
-    display: none;
   }
 
   .hire-steps__item {

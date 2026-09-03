@@ -121,12 +121,6 @@ function Home() {
           <div className="project-grid">
             {projects.slice(0, 3).map((project) => (
               <article key={project.id} className="project-card">
-                <div className="project-card__visual" aria-hidden="true">
-                  <div className="project-art">
-                    <span className="project-art__bar" />
-                    <span className="project-art__panel" />
-                  </div>
-                </div>
                 <div className="project-card__body">
                   <span className="project-card__category">{project.category}</span>
                   <h3>{project.name}</h3>

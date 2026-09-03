@@ -403,6 +403,12 @@ textarea:focus-visible {
   border: 1px solid var(--border);
   background: var(--light-cyan);
   aspect-ratio: 4 / 3;
+  transition: transform 260ms ease, box-shadow 260ms ease;
+}
+
+.hero-photo:hover {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 22px 46px rgba(38, 55, 70, 0.16);
 }
 
 .hero-photo__img {
@@ -570,35 +576,6 @@ textarea:focus-visible {
 }
 
 /* ==========================================================================
-   PROJECT ART (Home + Projects page)
-   ========================================================================== */
-.project-art {
-  width: 100%;
-  max-width: 320px;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: var(--white);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  min-height: 120px;
-}
-
-.project-art__bar {
-  height: 26px;
-  background: var(--light);
-  border-bottom: 1px solid var(--border);
-}
-
-.project-art__panel {
-  height: 60px;
-  margin: 12px;
-  background: var(--light-cyan);
-  border-radius: 5px;
-  flex: 1;
-}
-
-/* ==========================================================================
    PROJECT CARDS (Home + Projects page)
    ========================================================================== */
 .project-grid {
@@ -621,15 +598,6 @@ textarea:focus-visible {
   transform: translateY(-4px);
   box-shadow: 0 12px 28px rgba(38, 55, 70, 0.08);
   border-color: var(--light-cyan);
-}
-
-.project-card__visual {
-  background: var(--light);
-  min-height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
 }
 
 .project-card__body {
@@ -804,8 +772,8 @@ textarea:focus-visible {
    ========================================================================== */
 .about-who {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 48px;
   align-items: center;
 }
 
@@ -823,53 +791,31 @@ textarea:focus-visible {
   margin-bottom: 0;
 }
 
-.about-art {
+.about-who__visual {
+  width: 95%;
+  max-width: 520px;
+  aspect-ratio: 16 / 10;
+  transition: transform 0.3s ease;
+}
+
+.about-who__image {
+  display: block;
   width: 100%;
-  max-width: 440px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  background: var(--white);
-  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.3s ease;
 }
 
-.about-art__header {
-  display: flex;
-  gap: 6px;
-  padding: 12px 16px;
-  border-bottom: 1px solid var(--border);
-  background: var(--light);
+.about-who__visual:hover {
+  transform: translateY(-5px) scale(1.02);
 }
 
-.about-art__dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--border);
-}
-
-.about-art__body {
-  padding: 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.about-art__title {
-  height: 16px;
-  background: var(--light-cyan);
-  border-radius: 4px;
-  width: 60%;
-}
-
-.about-art__line {
-  height: 10px;
-  background: var(--light);
-  border-radius: 4px;
-  width: 100%;
-}
-
-.about-art__line--short {
-  width: 70%;
+.about-who__visual:hover .about-who__image {
+  box-shadow: 0 14px 32px rgba(38, 55, 70, 0.14);
 }
 
 /* About timeline */
@@ -929,13 +875,6 @@ textarea:focus-visible {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 32px;
-  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
-}
-
-.about-mv__block:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(38, 55, 70, 0.08);
-  border-color: var(--light-cyan);
 }
 
 .about-mv__icon {
@@ -948,13 +887,6 @@ textarea:focus-visible {
   background: var(--light-cyan);
   color: var(--primary);
   margin-bottom: 20px;
-  transition: transform var(--transition), background var(--transition), color var(--transition);
-}
-
-.about-mv__block:hover .about-mv__icon {
-  transform: scale(1.06);
-  background: var(--primary);
-  color: var(--white);
 }
 
 .about-mv__block h3 {
@@ -1053,22 +985,22 @@ textarea:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
 .workflow__step {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
 }
 
 .workflow__node {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  padding: 14px 24px;
-  font-size: 15px;
+  padding: 20px 36px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--text);
   white-space: nowrap;
@@ -1131,13 +1063,6 @@ textarea:focus-visible {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
-}
-
-.hire-steps__item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(38, 55, 70, 0.08);
-  border-color: var(--light-cyan);
 }
 
 .hire-steps__icon {
@@ -1151,12 +1076,6 @@ textarea:focus-visible {
   align-items: center;
   justify-content: center;
   margin-bottom: 18px;
-  transition: background var(--transition), color var(--transition);
-}
-
-.hire-steps__item:hover .hire-steps__icon {
-  background: var(--primary);
-  color: var(--white);
 }
 
 .hire-steps__title {

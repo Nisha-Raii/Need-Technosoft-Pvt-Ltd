@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import PageHero from '../components/PageHero.jsx'
 import SectionHeading from '../components/SectionHeading.jsx'
 import StatItem from '../components/StatItem.jsx'
+import aboutWhoImage from '../assets/images/about-who.jpg'
 
 const outlineIconProps = {
   fill: 'none',
@@ -84,19 +85,12 @@ function About() {
               what we deliver is genuinely useful rather than just technically complete.
             </p>
           </div>
-          <div className="about-who__visual" aria-hidden="true">
-            <div className="about-art">
-              <div className="about-art__header">
-                <span className="about-art__dot" />
-                <span className="about-art__dot" />
-                <span className="about-art__dot" />
-              </div>
-              <div className="about-art__body">
-                <span className="about-art__title" />
-                <span className="about-art__line" />
-                <span className="about-art__line about-art__line--short" />
-              </div>
-            </div>
+          <div className="about-who__visual">
+            <img
+              className="about-who__image"
+              src={aboutWhoImage}
+              alt="Software development workspace with laptop, mobile devices and technology interfaces"
+            />
           </div>
         </div>
       </section>
