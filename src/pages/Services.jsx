@@ -11,15 +11,16 @@ function Services() {
   return (
     <>
       <PageHero
+        className="page-hero--compact"
         heading="Services"
-        description="Practical technology solutions designed around your business goals."
+        description="Practical technology solutions designed around your business goals, built to support your business and help you grow."
       />
 
       <section className="section">
         <div className="container">
           <div className="service-grid">
             {services.map((service) => (
-              <ServiceCard key={service.id} service={service} showNumber showCapabilities />
+              <ServiceCard key={service.id} service={service} />
             ))}
           </div>
         </div>

@@ -21,7 +21,7 @@ function Projects() {
         description="A sample of the kind of work we do. Each project is built around a specific business need."
       />
 
-      <section className="section">
+      <section className="section section--projects">
         <div className="container">
           <div className="filter-bar" role="tablist" aria-label="Filter projects by category">
             {categories.map((cat) => (

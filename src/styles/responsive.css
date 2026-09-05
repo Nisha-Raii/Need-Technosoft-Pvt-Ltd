@@ -19,8 +19,48 @@
     padding-block: 64px;
   }
 
+  .section--projects {
+    padding-top: 48px;
+  }
+
+  .section--work {
+    padding-block: 48px;
+  }
+
+  .section--values {
+    padding-block: 48px;
+  }
+
+  .section--flow {
+    padding-block: 48px;
+  }
+
+  .section--tech-list {
+    padding-top: 14px;
+  }
+
+  .section--tech-list .home-tech__row {
+    padding-block: 26px;
+  }
+
+  .section--who {
+    padding-top: 32px;
+  }
+
+  .section--careers {
+    padding-block: 36px;
+  }
+
+  .section--roles {
+    padding-block: 16px;
+  }
+
+  .section--approach {
+    padding-top: 30px;
+  }
+
   .hero {
-    padding-block: 48px 56px;
+    padding-block: 44px 48px;
   }
 
   .hero__grid {
@@ -52,6 +92,7 @@
   }
 
   /* Service / project / tech cards */
+  .home-why,
   .service-grid,
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -71,6 +112,14 @@
     border-right: none;
     border-bottom: 1px solid var(--border);
     padding-block: 18px;
+  }
+
+  .stats-band {
+    padding-block: 12px;
+  }
+
+  .stats-band--about {
+    margin-bottom: 70px;
   }
 
   /* Home tech rows */
@@ -102,12 +151,6 @@
     gap: 32px;
   }
 
-  /* Careers */
-  .reasons-list {
-    grid-template-columns: 1fr;
-    max-width: 100%;
-  }
-
   .hire-steps {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -130,7 +173,7 @@
   /* Footer */
   .footer__grid {
     grid-template-columns: 1fr 1fr;
-    gap: 36px 24px;
+    gap: 24px 16px;
   }
 
   .footer__brand {
@@ -209,6 +252,48 @@
     padding-block: 48px;
   }
 
+  .section--projects {
+    padding-top: 40px;
+  }
+
+  .section--work {
+    padding-block: 40px;
+  }
+
+  .section--values {
+    padding-block: 40px;
+  }
+
+  .section--flow {
+    padding-block: 40px;
+  }
+
+  .section--tech-list {
+    padding-top: 14px;
+  }
+
+  .section--tech-list .home-tech__row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-block: 10px;
+  }
+
+  .section--who {
+    padding-top: 24px;
+  }
+
+  .section--careers {
+    padding-block: 32px;
+  }
+
+  .section--roles {
+    padding-block: 12px;
+  }
+
+  .section--approach {
+    padding-top: 24px;
+  }
+
   .section-heading {
     margin-bottom: 32px;
   }
@@ -222,6 +307,10 @@
   }
 
   /* About — Who we are image */
+  .about-who__text .section-heading h2 {
+    font-size: 32px;
+  }
+
   .about-who__visual {
     width: min(100%, 360px);
     margin-inline: auto;
@@ -229,7 +318,7 @@
 
   /* Hero */
   .hero {
-    padding-block: 36px 44px;
+    padding-block: 32px 40px;
   }
 
   .hero h1 {
@@ -262,6 +351,14 @@
     font-size: 13.5px;
   }
 
+  .stats-band {
+    padding-block: 10px;
+  }
+
+  .stats-band--about {
+    margin-bottom: 50px;
+  }
+
   /* Home tech rows */
   .home-tech__row {
     grid-template-columns: 1fr;
@@ -279,6 +376,8 @@
   }
 
   /* Service / project / tech cards */
+  .home-why,
+  .reason-grid,
   .service-grid,
   .project-grid {
     grid-template-columns: 1fr;
@@ -303,6 +402,7 @@
   .workflow__node {
     width: 100%;
     text-align: center;
+    white-space: normal;
   }
 
   .workflow__arrow {
@@ -311,7 +411,11 @@
 
   /* Page hero */
   .page-hero {
-    padding-block: 40px 36px;
+    padding-block: 30px 26px;
+  }
+
+  .page-hero--compact {
+    padding-block: 30px 26px;
   }
 
   .page-hero h1 {
@@ -374,8 +478,8 @@
   /* Footer */
   .footer__grid {
     grid-template-columns: 1fr;
-    gap: 28px;
-    padding-block: 40px 32px;
+    gap: 24px;
+    padding-block: 28px 20px;
   }
 
   .footer__brand {

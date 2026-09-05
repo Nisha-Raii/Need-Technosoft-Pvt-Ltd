@@ -1,28 +1,50 @@
 import { useEffect } from 'react'
+import { CheckCircle2 } from 'lucide-react'
 import Button from '../components/Button.jsx'
 import SectionHeading from '../components/SectionHeading.jsx'
-import StatItem from '../components/StatItem.jsx'
 import ServiceCard from '../components/ServiceCard.jsx'
-import stats from '../data/stats.js'
-import { homeServices } from '../data/services.js'
-import projects from '../data/projects.js'
+import StatItem from '../components/StatItem.jsx'
 import heroImage from '../assets/images/company-hero.jpg'
+import stats from '../data/stats.js'
+import services from '../data/services.js'
+import projects from '../data/projects.js'
 import {
   CodeIcon,
   ServerIcon,
   MobileIcon,
   DatabaseIcon,
-  CloudIcon,
-  DesignIcon,
 } from '../components/TechIcon.jsx'
+
+const featuredServiceIds = [
+  'web-development',
+  'software-development',
+  'mobile-development',
+]
+
+const reasons = [
+  {
+    title: 'Practical solutions',
+    text: 'We build for the problem at hand, avoiding unnecessary features and complexity.',
+  },
+  {
+    title: 'Quality development',
+    text: 'Stable, well-supported tools and clean code that keeps working long after launch.',
+  },
+  {
+    title: 'Client-focused approach',
+    text: 'We work closely with your team throughout the project, not just at the start and end.',
+  },
+  {
+    title: 'Reliable support',
+    text: 'Our involvement continues after launch, keeping systems current and running smoothly.',
+  },
+]
 
 const homeCategories = [
   { title: 'Frontend', Icon: CodeIcon, items: ['React', 'JavaScript', 'HTML5', 'CSS3'] },
   { title: 'Backend', Icon: ServerIcon, items: ['Node.js', 'Laravel', 'PHP', 'Python', 'Java'] },
   { title: 'Mobile', Icon: MobileIcon, items: ['Flutter'] },
   { title: 'Database', Icon: DatabaseIcon, items: ['MySQL', 'MongoDB'] },
-  { title: 'Cloud & DevOps', Icon: CloudIcon, items: ['AWS', 'Git', 'GitHub'] },
-  { title: 'Design & Collaboration', Icon: DesignIcon, items: ['Figma'] },
 ]
 
 function Home() {
@@ -30,25 +52,24 @@ function Home() {
     document.title = "Need Technosoft Pvt. Ltd. | Digital Solutions & Software Development"
   }, [])
 
+  const featuredServices = services.filter((s) => featuredServiceIds.includes(s.id))
+
   return (
     <>
-      {/* HERO */}
+      {/* HER0 */}
       <section className="hero">
         <div className="container hero__grid">
           <div className="hero__content">
-            <h1>Digital solutions built around your business.</h1>
+            <h1>We build software that solves real business problems</h1>
             <p className="hero__desc">
-              Need Technosoft helps businesses turn ideas into practical digital
-              products. From websites and custom software to mobile applications,
-              we design and develop reliable solutions that make everyday work
-              simpler and more efficient.
+              Need Technosoft is a software company in Biratnagar that designs and builds websites, custom software, and mobile applications that help businesses work smarter and grow.
             </p>
             <div className="hero__actions">
               <Button to="/contact" variant="primary" fullWidthMobile>
                 Contact Us
               </Button>
-              <Button to="/projects" variant="outline" icon fullWidthMobile>
-                View Our Work
+              <Button to="/services" variant="outline" fullWidthMobile>
+                Explore Services
               </Button>
             </div>
           </div>
@@ -66,42 +87,8 @@ function Home() {
         </div>
       </section>
 
-      {/* COMPANY INTRODUCTION */}
-      <section className="section intro">
-        <div className="container">
-          <div className="intro__content">
-            <h2>Technology that solves real business problems.</h2>
-            <p>
-              We build practical digital products designed to fit the way our clients
-              actually work. Rather than adding technology for its own sake, we focus
-              on the outcome it delivers.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* SERVICES OVERVIEW */}
-      <section className="section section--tint">
-        <div className="container">
-          <SectionHeading
-            heading="What we do"
-            description="A focused set of services for building and maintaining a business's digital presence."
-          />
-          <div className="service-grid">
-            {homeServices.map((service) => (
-              <ServiceCard key={service.id} service={service} />
-            ))}
-          </div>
-          <div className="section__cta">
-            <Button to="/services" variant="secondary" icon>
-              View All Services
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* STATISTICS */}
-      <section className="section">
+      <section className="stats-band">
         <div className="container">
           <div className="stats__grid">
             {stats.map((stat) => (
@@ -111,12 +98,32 @@ function Home() {
         </div>
       </section>
 
-      {/* FEATURED PROJECTS */}
-      <section className="section section--tint">
+      {/* SERVICES */}
+      <section className="section">
         <div className="container">
           <SectionHeading
-            heading="Selected work"
-            description="A few examples of the projects we've delivered."
+            heading="What We Do"
+            description="Practical digital solutions designed around real business needs."
+          />
+          <div className="service-grid">
+            {featuredServices.map((service) => (
+              <ServiceCard key={service.id} service={service} />
+            ))}
+          </div>
+          <div className="section__cta">
+<Button to="/services" variant="secondary">
+                Explore Services
+              </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* PROJECTS */}
+      <section className="section section--tint section--work">
+        <div className="container">
+          <SectionHeading
+            heading="Selected Work"
+            description="A few examples of the digital products and systems we've delivered."
           />
           <div className="project-grid">
             {projects.slice(0, 3).map((project) => (
@@ -135,9 +142,9 @@ function Home() {
             ))}
           </div>
           <div className="section__cta">
-            <Button to="/projects" variant="secondary" icon>
-              View All Projects
-            </Button>
+<Button to="/projects" variant="secondary">
+                View All Projects
+              </Button>
           </div>
         </div>
       </section>
@@ -146,8 +153,8 @@ function Home() {
       <section className="section">
         <div className="container">
           <SectionHeading
-            heading="Technologies we work with"
-            description="A focused set of languages, frameworks and tools we use to build reliable digital solutions."
+            heading="Technologies We Work With"
+            description="We use modern and reliable technologies to build scalable digital solutions."
           />
           <div className="home-tech">
             {homeCategories.map((category, i) => {
@@ -164,41 +171,69 @@ function Home() {
               )
             })}
           </div>
+          <div className="section__cta">
+<Button to="/technologies" variant="secondary">
+                Explore Technologies
+              </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* CAREERS */}
+      <section className="section section--tint" style={{ paddingBlock: '48px 36px' }}>
+        <div className="container">
+          <div className="intro__content intro__content--left intro__content--careers">
+            <h2>Build Your Career With Us</h2>
+            <p>
+              Join a team where you can learn, grow and work on real-world technology
+              projects.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* WHY NEED TECHNOSOFT */}
-      <section className="section section--tint">
+      <section className="section" style={{ paddingTop: '40px', paddingBottom: '48px' }}>
         <div className="container">
-          <SectionHeading heading="Why Need Technosoft" align="left" />
-          <div className="why-list">
-            <div className="why-list__item">
-              <span>01</span>
-              <div>
-                <h3>Practical solutions</h3>
-                <p>We build for the problem at hand, avoiding unnecessary features and complexity.</p>
-              </div>
-            </div>
-            <div className="why-list__item">
-              <span>02</span>
-              <div>
-                <h3>Quality development</h3>
-                <p>Stable, well-supported tools and clean code that keeps working long after launch.</p>
-              </div>
-            </div>
-            <div className="why-list__item">
-              <span>03</span>
-              <div>
-                <h3>Client-focused approach</h3>
-                <p>We work closely with your team throughout the project, not just at the start and end.</p>
-              </div>
-            </div>
-            <div className="why-list__item">
-              <span>04</span>
-              <div>
-                <h3>Reliable support</h3>
-                <p>Our involvement continues after launch, keeping systems current and running smoothly.</p>
-              </div>
+          <div className="section-heading section-heading--left" style={{ marginBottom: '24px' }}>
+            <h3 style={{ fontSize: '24px', fontWeight: 700, letterSpacing: '-0.01em', margin: 0 }}>
+              Why Need Technosoft
+            </h3>
+          </div>
+          <div className="reason-grid">
+            {reasons.map((reason) => (
+              <article key={reason.title} className="reason-box">
+                <div className="reason-box__head">
+                  <span className="reasons-list__check">
+                    <CheckCircle2 size={18} aria-hidden="true" />
+                  </span>
+                  <h3>{reason.title}</h3>
+                </div>
+                <p>{reason.text}</p>
+              </article>
+            ))}
+          </div>
+          <div className="home-cta" style={{ justifyContent: 'flex-start' }}>
+            <Button to="/careers" variant="secondary">
+              View Careers
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT / FINAL CTA */}
+      <section className="section" style={{ paddingTop: '12px' }}>
+        <div className="container">
+          <div className="intro__content intro__content--lead intro__content--left">
+            <h2>Let's Build Something That Matters</h2>
+            <p>
+              Have a project or business requirement in mind? Tell us what you're trying
+              to achieve and we'll work with you on a practical solution.
+            </p>
+            <div className="home-cta">
+              <Button to="/contact" variant="primary">
+                Contact Us
+              </Button>
             </div>
           </div>
         </div>

@@ -3,7 +3,7 @@
 const stats = [
   { value: '50+', label: 'Projects Delivered' },
   { value: '30+', label: 'Happy Clients' },
-  { value: '99%', label: 'Client Retention' },
+  { value: '100%', label: 'Client Retention' },
   { value: '24/7', label: 'Support Availability' },
 ]
 

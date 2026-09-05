@@ -41,7 +41,7 @@ function Technologies() {
       />
 
       {/* TECHNOLOGY CATEGORIES */}
-      <section className="section">
+      <section className="section section--tech-list">
         <div className="container">
           <div className="home-tech">
             {technologies.map((group, i) => {
@@ -63,7 +63,7 @@ function Technologies() {
       </section>
 
       {/* HOW TECHNOLOGIES WORK TOGETHER */}
-      <section className="section section--tint">
+      <section className="section section--flow">
         <div className="container">
           <SectionHeading
             heading="How technologies work together"

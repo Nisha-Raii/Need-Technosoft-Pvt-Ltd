@@ -4,10 +4,22 @@ import PageHero from '../components/PageHero.jsx'
 import SectionHeading from '../components/SectionHeading.jsx'
 
 const reasons = [
-  'Learn and grow',
-  'Work on real projects',
-  'Collaborative environment',
-  'Practical experience',
+  {
+    title: 'Practical solutions',
+    text: 'We build for the problem at hand, avoiding unnecessary features and complexity.',
+  },
+  {
+    title: 'Quality development',
+    text: 'Stable, well-supported tools and clean code that keeps working long after launch.',
+  },
+  {
+    title: 'Client-focused approach',
+    text: 'We work closely with your team throughout the project, not just at the start and end.',
+  },
+  {
+    title: 'Reliable support',
+    text: 'Our involvement continues after launch, keeping systems current and running smoothly.',
+  },
 ]
 
 const hireSteps = [
@@ -67,29 +79,32 @@ function Careers() {
   return (
     <>
       <PageHero
-        heading="Build your career with us"
-        description="We're a growing software team in Biratnagar where curiosity, ownership, and continuous growth are part of how we work."
+        heading="Build Your Career With Us"
+        description="Join a team where you can learn, grow and work on real-world technology projects."
       />
 
       {/* WHY WORK WITH US */}
-      <section className="section">
+      <section className="section section--careers">
         <div className="container">
-          <SectionHeading heading="Why work with us" align="left" />
-          <ul className="reasons-list">
+          <SectionHeading heading="Why Need Technosoft" align="left" />
+          <div className="reason-grid">
             {reasons.map((reason) => (
-              <li key={reason} className="reasons-list__item">
-                <span className="reasons-list__check">
-                  <CheckCircle2 size={18} aria-hidden="true" />
-                </span>
-                <span>{reason}</span>
-              </li>
+              <article key={reason.title} className="reason-box">
+                <div className="reason-box__head">
+                  <span className="reasons-list__check">
+                    <CheckCircle2 size={18} aria-hidden="true" />
+                  </span>
+                  <h3>{reason.title}</h3>
+                </div>
+                <p>{reason.text}</p>
+              </article>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 
       {/* OPEN POSITIONS */}
-      <section className="section section--tint">
+      <section className="section section--tint section--careers section--roles">
         <div className="container">
           <SectionHeading
             heading="Open positions"
@@ -100,9 +115,9 @@ function Careers() {
       </section>
 
       {/* HOW WE HIRE */}
-      <section className="section">
+      <section className="section section--careers">
         <div className="container">
-          <SectionHeading heading="How we hire" align="center" />
+          <SectionHeading heading="How we hire" align="left" />
           <div className="hire-steps">
             {hireSteps.map((step) => {
               const Icon = step.icon
@@ -121,7 +136,7 @@ function Careers() {
       </section>
 
       {/* APPLICATION */}
-      <section className="section section--tint">
+      <section className="section section--tint section--careers">
         <div className="container">
           <SectionHeading heading="Join our team" description="Fill out the form below and attach your resume." align="center" />
           <div className="careers-apply">

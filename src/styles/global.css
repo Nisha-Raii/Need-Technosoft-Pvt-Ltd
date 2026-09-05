@@ -25,6 +25,11 @@
   --transition: 200ms ease;
 
   --header-height: 72px;
+
+  --footer-bg: #F5F8FC;
+  --footer-text: #5B6D7E;
+  --footer-accent: #12BFE8;
+  --footer-hr: #D9E4EE;
 }
 
 /* ==========================================================================
@@ -182,8 +187,59 @@ textarea:focus-visible {
   background: var(--light);
 }
 
+.section--who {
+  padding-top: 40px;
+}
+
+.section--careers {
+  padding-block: 40px;
+}
+
+.section--roles {
+  padding-block: 20px;
+}
+
+.section--roles .section-heading {
+  margin-bottom: 0;
+}
+
+.section--tech-list {
+  padding-top: 28px;
+  padding-bottom: 16px;
+}
+
+.section--tech-list .home-tech__row {
+  padding-block: 30px;
+}
+
+.section--approach {
+  background: var(--white);
+  padding-top: 36px;
+}
+
 .section__cta {
   margin-top: 40px;
+}
+
+.section--work {
+  padding-block: 52px;
+}
+
+.section--values {
+  padding-block: 52px;
+}
+
+.section--projects {
+  padding-top: 60px;
+}
+
+.section--projects .filter-bar {
+  margin-bottom: 32px;
+}
+
+.section--flow {
+  background: var(--white);
+  padding-block: 64px;
 }
 
 .section-heading {
@@ -215,7 +271,7 @@ textarea:focus-visible {
    ========================================================================== */
 .page-hero {
   background: var(--light);
-  padding-block: 60px 48px;
+  padding-block: 40px 32px;
   border-bottom: 1px solid var(--border);
 }
 
@@ -229,6 +285,10 @@ textarea:focus-visible {
   margin-top: 14px;
   font-size: 17px;
   max-width: 640px;
+}
+
+.page-hero--compact {
+  padding-block: 40px 32px;
 }
 
 /* ==========================================================================
@@ -359,13 +419,13 @@ textarea:focus-visible {
    ========================================================================== */
 .hero {
   background: linear-gradient(180deg, var(--light) 0%, var(--white) 100%);
-  padding-block: 64px 72px;
+  padding-block: 56px 46px;
 }
 
 .hero__grid {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
-  gap: 56px;
+  gap: 48px;
   align-items: center;
 }
 
@@ -373,13 +433,14 @@ textarea:focus-visible {
   font-size: 48px;
   line-height: 1.12;
   letter-spacing: -0.02em;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
+  max-width: 440px;
 }
 
 .hero__desc {
   font-size: 17px;
   max-width: 500px;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
 }
 
 .hero__actions {
@@ -439,6 +500,33 @@ textarea:focus-visible {
   margin-inline: auto;
 }
 
+.home-cta {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+}
+
+.intro__content--lead h2 {
+  font-size: 34px;
+}
+
+.intro__content--left {
+  margin-inline: 0;
+  text-align: left;
+}
+
+.intro__content--left p {
+  margin-inline: 0;
+}
+
+.intro__content--careers p {
+  max-width: 640px;
+}
+
+.intro__content--left .home-cta {
+  justify-content: flex-start;
+}
+
 /* ==========================================================================
    SERVICE CARDS (Home + Services page)
    ========================================================================== */
@@ -452,9 +540,10 @@ textarea:focus-visible {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 28px;
+  padding: 26px;
   display: flex;
   flex-direction: column;
+  height: 100%;
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
@@ -468,29 +557,23 @@ textarea:focus-visible {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .service-card__icon {
   width: 48px;
   height: 48px;
-  border-radius: 12px;
+  border-radius: var(--radius-sm);
   background: var(--light-cyan);
   color: var(--secondary);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background var(--transition), color var(--transition);
-}
-
-.service-card:hover .service-card__icon {
-  background: var(--primary);
-  color: var(--white);
 }
 
 .service-card__number {
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--muted);
   letter-spacing: 0.03em;
 }
@@ -498,46 +581,15 @@ textarea:focus-visible {
 .service-card h3 {
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 8px;
+  color: var(--text);
+  margin-bottom: 10px;
 }
 
 .service-card p {
   font-size: 14.5px;
-}
-
-.service-card__caps {
-  margin-top: 18px;
-  padding-top: 16px;
-  border-top: 1px solid var(--border);
-}
-
-.service-card__caps h4 {
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--text);
-  margin-bottom: 12px;
-}
-
-.service-card__caps ul {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-}
-
-.service-card__caps li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13.5px;
-  color: var(--text);
-  line-height: 1.5;
-}
-
-.service-card__caps svg {
-  color: var(--primary);
-  flex-shrink: 0;
+  color: var(--muted);
+  line-height: 1.6;
+  flex: 1;
 }
 
 /* ==========================================================================
@@ -573,6 +625,80 @@ textarea:focus-visible {
   font-size: 14.5px;
   color: var(--muted);
   font-weight: 500;
+}
+
+/* Compact intro band (Home hero + stats) */
+.stats-band {
+  background: var(--light);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding-block: 16px;
+}
+
+.stats-band .stats__grid {
+  gap: 40px;
+}
+
+.stats-band .stat-item {
+  padding: 18px 24px;
+}
+
+.stats-band--about {
+  margin-bottom: 100px;
+}
+
+/* Home: Why Need Technosoft (numbered cards) */
+.home-why {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.home-why__card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.home-why__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(38, 55, 70, 0.08);
+  border-color: var(--light-cyan);
+}
+
+.home-why__head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.home-why__number {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.02em;
+}
+
+.home-why__line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.home-why h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.home-why p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--muted);
 }
 
 /* ==========================================================================
@@ -779,6 +905,11 @@ textarea:focus-visible {
 
 .about-who__text .section-heading {
   margin-bottom: 20px;
+}
+
+.about-who__text .section-heading h2 {
+  font-size: 40px;
+  font-weight: 700;
 }
 
 .about-who__text p {
@@ -996,7 +1127,7 @@ textarea:focus-visible {
 }
 
 .workflow__node {
-  background: var(--white);
+  background: var(--footer-bg);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 20px 36px;
@@ -1021,23 +1152,43 @@ textarea:focus-visible {
 /* ==========================================================================
    CAREERS PAGE
    ========================================================================== */
-.reasons-list {
+.reason-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  max-width: 640px;
+  gap: 24px;
 }
 
-.reasons-list__item {
+.reason-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.reason-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(38, 55, 70, 0.08);
+  border-color: var(--light-cyan);
+}
+
+.reason-box__head {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 16px 20px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  font-size: 16px;
-  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.reason-box__head h3 {
+  font-size: 18px;
+  font-weight: 700;
   color: var(--text);
+}
+
+.reason-box p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--muted);
 }
 
 .reasons-list__check {
@@ -1269,55 +1420,58 @@ textarea:focus-visible {
    FOOTER
    ========================================================================== */
 .footer {
-  background: var(--light);
-  border-top: 1px solid var(--border);
+  background: var(--footer-bg);
+  border-top: 1px solid var(--footer-hr);
   margin-top: auto;
 }
 
 .footer__grid {
   display: grid;
   grid-template-columns: 1.6fr 1fr 1fr 1.3fr;
-  gap: 40px;
-  padding-block: 56px 40px;
+  gap: 24px;
+  padding-block: 40px 32px;
 }
 
 .footer__brand p {
   font-size: 14.5px;
   max-width: 300px;
+  color: var(--footer-text);
+  line-height: 1.6;
 }
 
 .footer__logo {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 .footer__col h3 {
   font-size: 14px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+  color: var(--text);
 }
 
 .footer__col ul {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
 }
 
 .footer__col a {
   font-size: 14.5px;
-  color: var(--muted);
+  color: var(--footer-text);
   transition: color var(--transition);
 }
 
 .footer__col a:hover {
-  color: var(--secondary);
+  color: var(--footer-accent);
 }
 
 .footer__contact {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
 .footer__contact li {
@@ -1325,33 +1479,34 @@ textarea:focus-visible {
   align-items: flex-start;
   gap: 10px;
   font-size: 14.5px;
-  color: var(--muted);
+  color: var(--footer-text);
 }
 
 .footer__contact svg {
-  color: var(--secondary);
+  color: var(--footer-accent);
   flex-shrink: 0;
   margin-top: 1px;
 }
 
 .footer__contact a {
-  color: var(--muted);
+  color: var(--footer-text);
 }
 
 .footer__contact a:hover {
-  color: var(--secondary);
+  color: var(--footer-accent);
 }
 
 .footer__bottom {
-  border-top: 1px solid var(--border);
+  background: #EDF3F9;
+  border-top: 1px solid var(--footer-hr);
 }
 
 .footer__bottom-inner {
-  padding-block: 18px;
+  padding-block: 14px;
 }
 
 .footer__bottom p {
   font-size: 13.5px;
-  color: var(--muted);
+  color: var(--footer-text);
   text-align: center;
 }
